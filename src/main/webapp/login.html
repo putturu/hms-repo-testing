@@ -1,0 +1,146 @@
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<html>
+<head>
+
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="./css/style.css" />
+<script type="text/javascript" src="./js/user-validate.js"></script>
+</head>
+<body id="LoginForm">
+	<div class="container">
+		<h1 class="form-heading">login Form</h1>
+		<div class="login-form">
+			<div class="main-div">
+				<div class="panel">
+					<h2>Login</h2>
+				</div>
+				<form id="Login" action="LoginServlet" method="post" onsubmit="return validate()">
+
+					<div class="form-group mt-4">
+
+
+						<input type="text" class="form-control" id="user-name" onblur="isValidDoctorName()" name="username"
+							placeholder="User Name">
+							<p id="p1"></p>
+					</div>
+
+					<div class="form-group">
+
+						<input type="password" class="form-control" id="user-password" name="password"
+							placeholder="Password">
+
+					</div>
+					<div class="form-group mt-3">
+						<select name="role" id="user-role" class="form-control">
+							<option value="">Select Role</option>
+							<option value="ADMIN">Admin</option>
+							<option value="DOCTOR">Doctor</option>
+							<option value="PATIENT">Patient</option>
+						</select>
+					</div>
+					<div class="forgot">
+						<a href="#forgot" data-toggle="modal" data-target="#forgot">Forgot password?</a>
+					</div>
+					<button type="submit" class="btn btn-primary" id="submit-btn">Sign In</button>
+					<button type="button" class="btn btn-primary mt-4"
+						data-toggle="modal" data-target="#signup">Register</button>
+				</form>
+				<div class="modal fade" id="signup" tabindex="-1" role="dialog"
+					aria-labelledby="login" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">Sign Up</h5>
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<form action="UserRegisterServlet" method="post">
+									<div class="form-group">
+										<input type="text" class="form-control" name="username"
+											placeholder="Enter user name">
+									</div>
+									<div>
+										<input type="password" class="form-control" name="password"
+											placeholder="Password">
+									</div>
+									<div>
+										<input type="password" class="form-control mt-2"
+											name="confirm-password" placeholder="Re-Enter Password">
+									</div>
+									<div class="form-group mt-2">
+										<select name="role" class="form-control">
+											<option value="">Select Role</option>
+											<option value="ADMIN">Admin</option>
+											<option value="DOCTOR">Doctor</option>
+											<option value="PATIENT">Patient</option>
+										</select>
+									</div>
+									<button type="submit" class="btn btn-primary mt-4">Sign
+										Up</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="forgot" tabindex="-1" role="dialog"
+					aria-labelledby="login" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">forgot password</h5>
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<form action="ForgotPasswordServlet" method="post">
+									<div class="form-group">
+										<input type="text" class="form-control" name="username"
+											placeholder="Enter user name">
+									</div>
+									<div>
+										<input type="password" class="form-control" name="password"
+											placeholder="new Password">
+									</div>
+									<div>
+										<input type="password" class="form-control mt-2"
+											name="confirm-password" placeholder="Re-Enter Password">
+									</div>
+									<div class="form-group mt-2">
+										<select name="role" class="form-control">
+											<option value="">Select Role</option>
+											<option value="ADMIN">Admin</option>
+											<option value="DOCTOR">Doctor</option>
+											<option value="PATIENT">Patient</option>
+										</select>
+									</div>
+									<button type="submit" class="btn btn-primary mt-4">update</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+</body>
+</html>

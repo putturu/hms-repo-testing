@@ -1,0 +1,29 @@
+@charset "ISO-8859-1"
+.navbar-items {
+    margin-left: auto;
+}
+
+.icon-container{
+	border:none;
+	
+}
+p{
+   color:white;	
+   font-family:"Roboto";
+   margin-bottom:0px;
+}
+.logo{
+	height:40px;
+	width:50px;
+}
+.heading{
+	font-family:fantasy;
+    color:#4484d4;
+    text-align:center;
+    font-size:30px;
+}
+.doc-bottom-container{
+	padding:10px;
+	background-color:#f9faf7;
+	height:100vh;
+}
